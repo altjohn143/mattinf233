@@ -1,19 +1,47 @@
-import { Link } from "react-router-dom";
 import "./Navbar.css";
  
 function Navbar() {
-    return (
-        <nav className="navbar">
-            <h2>Matthew.</h2>
  
-            <ul>
-                <li><Link to="/">Home</Link></li>
-                <li><Link to="/profile">Profile</Link></li>
-                <li><Link to="/projects">Projects</Link></li>
-                <li><Link to="/contact">Contact</Link></li>
-            </ul>
-        </nav>
-    );
+const scrollToSection = (id)=>{
+ 
+const section = document.getElementById(id);
+ 
+if(section){
+  section.scrollIntoView({
+   behavior:"smooth",
+   block:"start"
+  });
+}
+ 
+};
+ 
+return (
+<nav className="navbar">
+ 
+<h2>Matthew.</h2>
+ 
+<ul>
+ 
+<li onClick={()=>scrollToSection("home")}>
+Home
+</li>
+ 
+<li onClick={()=>scrollToSection("profile")}>
+Profile
+</li>
+ 
+<li onClick={()=>scrollToSection("projects")}>
+Projects
+</li>
+ 
+<li onClick={()=>scrollToSection("contact")}>
+Contact
+</li>
+ 
+</ul>
+ 
+</nav>
+);
 }
  
 export default Navbar;

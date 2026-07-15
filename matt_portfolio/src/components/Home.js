@@ -1,29 +1,29 @@
 import "./Home.css";
  
 function Home(){
-    return(
-        <section className="hero">
  
-            <div className="left">
-                <h3>Hello, I'm</h3>
-                <h1>John Matthew Olano</h1>
+return(
+<section id="home" className="hero">
  
-                <p>
-                    IT Student | Website & Mobile Developer
-                </p>
+  <div className="left">
+   <h3>Hello, I'm</h3>
+   <h1>Matthew Olano</h1>
+   <p>
+    IT Student | React Developer | UI Designer
+   </p>
+   <button
+   onClick={()=>{
+    document.getElementById("projects")
+    .scrollIntoView({behavior:"smooth"})
+   }}>
+    View Projects
+   </button>
  
-                <button>View Projects</button>
-            </div>
+  </div>
  
-            <div className="right">
-                <img
-                src="https://i.pravatar.cc/300"
-                alt=""
-                />
-            </div>
+</section>
+)
  
-        </section>
-    )
 }
  
 export default Home;

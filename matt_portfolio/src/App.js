@@ -1,24 +1,21 @@
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Home from "./components/Home";
 import Profile from "./components/Profile";
 import Projects from "./components/Projects";
 import Contact from "./components/Contact";
-import './App.css';
-
+ 
+import "./App.css";
+ 
 function App() {
   return (
-    <Router>
+    <>
       <Navbar />
- 
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/profile" element={<Profile />} />
-        <Route path="/projects" element={<Projects />} />
-        <Route path="/contact" element={<Contact />} />
-      </Routes>
-    </Router>
+      <Home />
+      <Profile />
+      <Projects />
+      <Contact />
+    </>
   );
 }
-
+ 
 export default App;
